@@ -1,5 +1,5 @@
 {
-  "name": "제자들 청소년부",
+  "name": "제자들",
   "short_name": "제자들",
   "start_url": "/jejadle/",
   "scope": "/jejadle/",
@@ -11,3 +11,4 @@
     { "src": "/jejadle/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+
