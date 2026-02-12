@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Photo Flashcards 6x4</title>
+<title>중1-2</title>
 
 <style>
 :root { --gap: 10px; }
@@ -15,8 +15,26 @@ html, body {
   background: #0f0f10;
 }
 
+.topbar{
+  height:55px;
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+  background:#141518;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.homeLink{
+  background:#2196f3;
+  color:#fff;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:8px;
+  font-weight:800;
+}
+
 .wrap {
-  height: 100vh;
+  height: calc(100vh - 55px);
   padding: var(--gap);
   box-sizing: border-box;
 }
@@ -84,6 +102,11 @@ button {
 </head>
 
 <body>
+
+<div class="topbar">
+  <a class="homeLink" href="../">제자들 청소년부</a>
+</div>
+
 <div class="wrap">
 
 <div class="controls">
@@ -93,7 +116,6 @@ button {
 
 <div class="grid">
 
-<!-- 카드들 -->
 <div class="card" data-img="img01.png" data-name="봄"></div>
 <div class="card" data-img="img02.png" data-name="여름"></div>
 <div class="card" data-img="img03.png" data-name="가을"></div>
@@ -128,7 +150,6 @@ button {
 </div>
 
 <script>
-
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
@@ -151,11 +172,4 @@ document.querySelector(".showAll").addEventListener("click", () => {
   cards.forEach(card => card.classList.add("show-photo"));
 });
 
-document.querySelector(".hideAll").addEventListener("click", () => {
-  cards.forEach(card => card.classList.remove("show-photo"));
-});
-
-</script>
-
-</body>
-</html>
+document.querySelector(".hideAll").addEventListener("click", ()
