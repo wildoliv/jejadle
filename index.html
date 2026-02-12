@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>제자들교회</title>
+
 <style>
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:20px;max-width:900px}
 h1{font-size:20px;margin:0 0 12px}
@@ -17,23 +18,28 @@ a.card{display:block;padding:14px;border:1px solid #e6e6e6;border-radius:14px;te
 .meta{color:#666;font-size:12px;margin-top:6px}
 </style>
 </head>
+
 <body>
 <h1>제자들교회</h1>
 <div class="grid" id="list"></div>
+
 <script>
 const LINKS = [
-  {title:"중1-1", tag:"계절 봄 여름 가을 겨울", url:"101/"},
-  {title:"중1-2", tag:"한글 자음 ㄱ ㄴ ㄷ ㄹ", url:"102/"},
+  {title:"중1-1", url:"101/"},
+  {title:"중1-2", url:"102/"},
 ];
-const list=document.getElementById('list');
-list.innerHTML="";
-LINKS.forEach(x=>{
-  const a=document.createElement('a');
-  a.className='card';
-  a.href=x.url;
-  a.innerHTML=`<div class="title">${x.title}</div><div class="meta">${x.url}</div>`;
+
+const list = document.getElementById("list");
+list.innerHTML = "";
+
+LINKS.forEach(x => {
+  const a = document.createElement("a");
+  a.className = "card";
+  a.href = x.url;
+  a.innerHTML = `<div class="title">${x.title}</div><div class="meta">${x.url}</div>`;
   list.appendChild(a);
 });
 </script>
+
 </body>
 </html>
