@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>제자들 청소년부</title>
 
+<!-- ✅ PWA 설정 -->
+<link rel="manifest" href="/jejadle/manifest.webmanifest">
+<meta name="theme-color" content="#f4f6f9">
+<link rel="apple-touch-icon" href="/jejadle/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="제자들">
+
 <style>
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -55,6 +63,13 @@ a.card:hover{
   <a class="card" href="101/">중1-1</a>
   <a class="card" href="102/">중1-2</a>
 </div>
+
+<!-- ✅ 서비스워커 등록 -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/jejadle/sw.js');
+}
+</script>
 
 </body>
 </html>
