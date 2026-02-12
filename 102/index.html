@@ -172,4 +172,10 @@ document.querySelector(".showAll").addEventListener("click", () => {
   cards.forEach(card => card.classList.add("show-photo"));
 });
 
-document.querySelector(".hideAll").addEventListener("click", ()
+document.querySelector(".hideAll").addEventListener("click", () => {
+  cards.forEach(card => card.classList.remove("show-photo"));
+});
+</script>
+
+</body>
+</html>
