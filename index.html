@@ -45,3 +45,70 @@ h1{
 }
 
 @media (max-width:720px){
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+  a.card{
+    padding:26px 10px;
+    font-size:18px;
+  }
+}
+
+a.card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  border-radius:16px;
+  text-decoration:none;
+  border:1px solid #e5e7eb;
+  font-size:22px;
+  font-weight:700;
+  transition:all .2s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,.04);
+}
+
+/* ✅ 중등 (연두) */
+a.card.middle{
+  background:#c6f6d5;
+  color:#065f46;
+}
+
+/* ✅ 고등 (하늘) */
+a.card.high{
+  background:#bfdbfe;
+  color:#1e3a8a;
+}
+
+a.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+</style>
+</head>
+
+<body>
+
+<h1>제자들교회 청소년부</h1>
+<div class="title-divider"></div>
+
+<div class="grid">
+  <a class="card middle" href="101/">중1</a>
+  <a class="card middle" href="102/">중2</a>
+  <a class="card middle" href="103/">중3</a>
+
+  <a class="card high" href="201/">고1</a>
+  <a class="card high" href="202/">고2</a>
+  <a class="card high" href="203/">고3</a>
+</div>
+
+<!-- ✅ 서비스워커 등록 -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/jejadle/sw.js');
+}
+</script>
+
+</body>
+</html>
