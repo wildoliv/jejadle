@@ -29,7 +29,7 @@ h1{
 
 .title-divider{
   width:120px;
-  height:8px;   /* ← 여기만 변경 */
+  height:8px;
   background:#d1d5db;
   margin:0 auto 35px auto;
   border-radius:8px;
@@ -53,6 +53,7 @@ h1{
 }
 
 a.card{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -64,16 +65,35 @@ a.card{
   font-weight:700;
   transition:all .2s ease;
   box-shadow:0 4px 10px rgba(0,0,0,.04);
+  overflow:hidden;
 }
 
+/* 🔥 상단 굵은 띠 */
+a.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:10px;   /* 굵기 조절 가능 */
+}
+
+/* 중등 */
 a.card.middle{
   background:#c6f6d5;
   color:#065f46;
 }
+a.card.middle::before{
+  background:#10b981;
+}
 
+/* 고등 */
 a.card.high{
   background:#bfdbfe;
   color:#1e3a8a;
+}
+a.card.high::before{
+  background:#3b82f6;
 }
 
 a.card:hover{
